@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>タスクタイマー</title>
+    </head>
+    <script src="./assets/js/timer.js" charset="utf-8"></script>
+    <script src="./assets/js/list.js" charset="utf-8"></script>
+    <script type="text/javascript">
+
+    </script>
+    <body>
+
+        <button type="button" name="button" onclick="timerStart();">再生</button>
+
+        <div class="list">
+            <button type="button" name="add-list" onclick="addList()">追加</button>
+            <ul class="list-contents">
+                <li class="list-content"><button type="button" name="remove-list" onclick="removeList(this)">削除</button><input type="text" placeholder="タスクを入力してください"></li>
+            </ul>
+        </div>
+
+    </body>
+</html>
