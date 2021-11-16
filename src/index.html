@@ -7,7 +7,10 @@
     <script src="./assets/js/timer.js" charset="utf-8"></script>
     <script src="./assets/js/list.js" charset="utf-8"></script>
     <script type="text/javascript">
-
+        window.onload = function() {
+            Notification.requestPermission();
+            const notification = new Notification("Check!");
+        };
     </script>
     <body>
 
