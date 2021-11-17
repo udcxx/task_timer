@@ -4,24 +4,45 @@
         <meta charset="utf-8">
         <title>タスクタイマー</title>
     </head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <script src="./assets/js/timer.js" charset="utf-8"></script>
     <script src="./assets/js/list.js" charset="utf-8"></script>
     <script type="text/javascript">
-        window.onload = function() {
-            Notification.requestPermission();
-            const notification = new Notification("Check!");
-        };
+
     </script>
     <body>
 
-        <button type="button" name="button" onclick="timerStart();">再生</button>
+        <div class="wrap">
 
-        <div class="list">
-            <button type="button" name="add-list" onclick="addList()">追加</button>
-            <ul class="list-contents">
-                <li class="list-content"><button type="button" name="remove-list" onclick="removeList(this)">削除</button><input type="text" placeholder="タスクを入力してください"></li>
-            </ul>
-        </div>
+            <div class="time">
+                <div class="time-nowtime">
+                    24:59
+                </div>
+                <div class="time-nowtask">
+                    <span class="bold">Now&gt;&gt;&gt;</span> 現在のタスクが表示されます。
+                </div>
+            </div><!--  /time -->
+
+            <div class="start">
+                <button type="button" name="button" onclick="timerStart();" class="start-btn">Start</button>
+            </div>
+        </div><!-- /wrap -->
+
+        <div class="wrap">
+            <div class="todo">
+                <button type="button" name="add-list" onclick="addList()" class="todo-add-btn">＋</button>
+                <div class="list">
+                    <ul class="list-contents">
+                        <li class="list-content"><button type="button" name="remove-list" onclick="removeList(this)" class="todo-remove-btn">🗑</button><input type="text" placeholder="タスクを入力してください"></li>
+                    </ul>
+                </div>
+            </div><!-- todo -->
+        </div><!-- wrap -->
 
     </body>
 </html>
