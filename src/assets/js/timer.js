@@ -16,7 +16,8 @@ function timerStart() {
     taskTimer = setInterval(taskAram, taskIntervalTime);
     restTimer = setTimeout(restAram, restIntervalTime, el.value);
 
-    alert(`タイマーを開始します。${el.value} を開始してください！`)
+    alert(`タイマーを開始します。${el.value} を開始してください！`);
+    document.querySelector('.time-nowtask-taskname').innerHTML = el.value
     count++;
 }
 
@@ -32,6 +33,7 @@ function taskAram() {
         count++;
         soundPlay();
         alert(`${el.value} 開始の時間ですよー`);
+        document.querySelector('.time-nowtask-taskname').innerHTML = el.value
         restTimer = setTimeout(restAram, restIntervalTime, el.value);
     } else {
         timerStop()
@@ -52,4 +54,30 @@ function soundPlay() {
 
 function s() {
     sound.play();
+}
+
+
+
+// 時刻表示
+window.onload = function() {
+    timeUpdate();
+    setInterval(timeUpdate, 1000);
+}
+function timeUpdate() {
+    const nowTime = new Date();
+    const nowTimeH = (function(){
+        if(nowTime.getHours() < 10) {
+            return '0' + nowTime.getHours()
+        } else {
+            return nowTime.getHours();
+        }
+    })()
+    const nowTimeM = (function() {
+        if(nowTime.getMinutes() < 10) {
+            return '0' + nowTime.getMinutes()
+        } else {
+            return nowTime.getMinutes();
+        }
+    })()
+    document.querySelector('.time-nowtime').innerHTML = `${nowTimeH}:${nowTimeM}`
 }
