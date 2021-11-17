@@ -1,0 +1,16 @@
+{
+  "name" : "Task Timer",
+  "short_name" : "taskTimer",
+  "description" : "1日のタスクを整理し、時間を区切って効率的に終えられるようサポートします。",
+  "start_url" : "./index.html",
+  "display" : "standalone",
+  "background_color" : "#061E22",
+  "theme_color" : "#061E22",
+  "icons" : [
+      {
+          "src" : "https://play.udcxx.me/favicon.ico",
+          "sizes" : "48x48",
+          "type" : "ico"
+      }
+  ]
+}
