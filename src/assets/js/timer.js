@@ -30,7 +30,7 @@ function taskAram() {
     if (count <= document.querySelector('ul.list-contents').childElementCount) {
         const el = document.querySelector(`ul.list-contents .list-content:nth-of-type(${count}) input`);
         count++;
-        sound.play();
+        soundPlay();
         alert(`${el.value} 開始の時間ですよー`);
         restTimer = setTimeout(restAram, restIntervalTime, el.value);
     } else {
@@ -39,6 +39,17 @@ function taskAram() {
 }
 
 function restAram(taskName) {
-    sound.play();
+    soundPlay();
     alert(`${taskName} 終了の時間ですよー`);
+}
+
+function soundPlay() {
+    for (var i = 0; i <= 5; i++) {
+        const t = i * 400
+        setTimeout(s, t)
+    }
+}
+
+function s() {
+    sound.play();
 }
