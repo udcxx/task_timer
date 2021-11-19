@@ -22,7 +22,7 @@ body {
 }
 
 .wrap {
-    width: 56.5rem;
+    width: 56.5rem; height: auto;
     margin: 0 auto;
     padding: .5rem .5rem 0;
     display: flex;
@@ -126,4 +126,18 @@ body {
 }
 .list-content input:focus {
     border-bottom: 1px solid #FAC883;
+}
+
+
+
+/*
+    GOOGLE ADs
+*/
+.googlead {
+    width: 728px; height: 90px;
+}
+@media (max-width: 740px) {
+    .googlead {
+        width: 300px; height: 250px;
+    }
 }
